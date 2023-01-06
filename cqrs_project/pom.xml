@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>..</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>cqrs_project</artifactId>
@@ -46,12 +46,18 @@
 		    <groupId>org.axonframework</groupId>
 		    <artifactId>axon-spring-boot-starter</artifactId>
 		    <version>4.6.2</version>
-		    <excludes>
-				<exclude>
+		    <exclusions>
+				<exclusion>
 					<groupId>org.axonframework</groupId>
 					<artifactId>axon-server-connector</artifactId>
-				</exclude>
-			</excludes>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>8.0.0.Final</version>
 		</dependency>
 	</dependencies>
 	
