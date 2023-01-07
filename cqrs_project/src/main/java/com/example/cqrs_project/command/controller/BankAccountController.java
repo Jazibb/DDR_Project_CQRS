@@ -4,10 +4,9 @@ import com.example.cqrs_project.command.dto.CreateAccountRequest;
 import com.example.cqrs_project.command.dto.DepositeRequest;
 import com.example.cqrs_project.command.dto.WithdrawalRequest;
 import com.example.cqrs_project.command.service.AccountCommandService;
-
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping(value = "/bank-account")
 public class BankAccountController {
 
-	private final AccountCommandService accountCommandService;
+    private final AccountCommandService accountCommandService;
 
     public BankAccountController(AccountCommandService accountCommandService) {
         this.accountCommandService = accountCommandService;
@@ -35,7 +34,7 @@ public class BankAccountController {
     }
 
     @PutMapping(value = "/deposit")
-    public ResponseEntity<String> deposit(@RequestBody DepositeRequest request) {
+    public ResponseEntity<String> deposit(@RequestBody DepositRequest request) {
         try {
             accountCommandService.depositToAccount(request);
 
@@ -56,4 +55,3 @@ public class BankAccountController {
         }
     }
 }
-

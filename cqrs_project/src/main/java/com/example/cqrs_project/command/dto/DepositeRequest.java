@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 
 @Data
 public class DepositeRequest {
-	
 	private String accountId;
 	private BigDecimal amount;
 	
@@ -21,4 +20,6 @@ public class DepositeRequest {
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
+	
+	
 }
