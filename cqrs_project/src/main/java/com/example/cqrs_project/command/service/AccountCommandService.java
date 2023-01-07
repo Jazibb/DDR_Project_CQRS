@@ -7,6 +7,7 @@ import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.stereotype.Service;
 
 import com.example.cqrs_project.command.dto.CreateAccountRequest;
+import com.example.cqrs_project.command.dto.DepositeRequest;
 import com.example.cqrs_project.command.dto.WithdrawalRequest;
 
 import com.example.cqrs_project.command.command.CreateAccountCommand;
@@ -31,7 +32,7 @@ public class AccountCommandService {
 
     }
 
-    public CompletableFuture<String> depositToAccount (DepositRequest depositRequest){
+    public CompletableFuture<String> depositToAccount (DepositeRequest depositRequest){
         return commandGateway.send(new DepositeMoneyCommand(
                 depositRequest.getAccountId(),
                 depositRequest.getAmount()

@@ -15,8 +15,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ManageAccountService {
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ManageAccountService.class);
-
-	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ManageAccountService.class);
 	
     private final AccountRepository accountRepository;
 
@@ -28,7 +26,7 @@ public class ManageAccountService {
     public void on(AccountCreatedEvent accountCreatedEvent) {
         log.info("Handling AccountCreatedEvent...");
         Account account = new Account();
-        account.setAccountId(accountCreatedEvent.getId());
+        account.setAccountID(accountCreatedEvent.getId());
         account.setBalance(accountCreatedEvent.getBalance());
         account.setStatus("CREATED");
 

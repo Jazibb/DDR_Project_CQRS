@@ -1,6 +1,7 @@
 package com.example.cqrs_project.command.command;
 
 import java.math.BigDecimal;
+
 public class CreateAccountCommand extends BaseCommand<String> {
 
     private final BigDecimal balance;
