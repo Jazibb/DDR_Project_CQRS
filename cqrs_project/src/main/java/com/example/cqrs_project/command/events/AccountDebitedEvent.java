@@ -1,6 +1,7 @@
-package com.example.cqrs_project.common.event;
+package com.example.cqrs_project.command.events;
 
 import java.math.BigDecimal;
+
 
 public class AccountDebitedEvent extends BaseEvent<String>{
 	

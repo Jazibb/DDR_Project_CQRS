@@ -1,4 +1,4 @@
-package com.example.cqrs_project.common.event;
+package com.example.cqrs_project.command.events;
 
 public class AccountActivatedEvent extends BaseEvent<String>{
 	

@@ -11,10 +11,10 @@ import org.axonframework.spring.stereotype.Aggregate;
 import com.example.cqrs_project.command.command.CreateAccountCommand;
 import com.example.cqrs_project.command.command.DepositeMoneyCommand;
 import com.example.cqrs_project.command.command.WithdrawMoneyCommand;
-import com.example.cqrs_project.common.event.AccountActivatedEvent;
-import com.example.cqrs_project.common.event.AccountCreatedEvent;
-import com.example.cqrs_project.common.event.AccountCreditedEvent;
-import com.example.cqrs_project.common.event.AccountDebitedEvent;
+import com.example.cqrs_project.command.events.AccountActivatedEvent;
+import com.example.cqrs_project.command.events.AccountCreatedEvent;
+import com.example.cqrs_project.command.events.AccountCreditedEvent;
+import com.example.cqrs_project.command.events.AccountDebitedEvent;
 
 import java.math.BigDecimal;
 
