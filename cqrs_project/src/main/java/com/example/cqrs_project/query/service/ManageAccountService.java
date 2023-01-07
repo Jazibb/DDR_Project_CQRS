@@ -16,7 +16,8 @@ import org.springframework.stereotype.Service;
 public class ManageAccountService {
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ManageAccountService.class);
 
-
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ManageAccountService.class);
+	
     private final AccountRepository accountRepository;
 
     public ManageAccountService(AccountRepository accountRepository) {
