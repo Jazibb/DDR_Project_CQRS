@@ -2,8 +2,8 @@ package com.example.cqrs_project.query.entity;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Account {
@@ -31,8 +31,4 @@ public class Account {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-
-    public void setAccountId(String id) {
-    }
 }

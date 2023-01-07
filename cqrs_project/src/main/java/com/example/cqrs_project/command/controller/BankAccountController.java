@@ -34,7 +34,7 @@ public class BankAccountController {
     }
 
     @PutMapping(value = "/deposit")
-    public ResponseEntity<String> deposit(@RequestBody DepositRequest request) {
+    public ResponseEntity<String> deposit(@RequestBody DepositeRequest request) {
         try {
             accountCommandService.depositToAccount(request);
 

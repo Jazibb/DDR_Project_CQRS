@@ -8,4 +8,13 @@ public class FindAccountByIdQuery {
 	
 	public FindAccountByIdQuery(String accountId) { this.accountId = accountId; }
 
+	public String getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+	
+
 }
