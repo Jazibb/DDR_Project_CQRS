@@ -14,15 +14,15 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping(value = "/bank-account")
 public class BankAccountController {
 
-	private final AccountCommandService accountCommandService;
-	
-	public BankAccountController(AccountCommandService accountCommandService) {
+    private final AccountCommandService accountCommandService;
+
+    public BankAccountController(AccountCommandService accountCommandService) {
         this.accountCommandService = accountCommandService;
     }
-	
-	@PostMapping(value = "/create")
-	public ResponseEntity<String> createAccount(@RequestBody CreateAccountRequest request) { 
-		try {
+
+    @PostMapping(value = "/create")
+    public ResponseEntity<String> createAccount(@RequestBody CreateAccountRequest request) {
+        try {
             CompletableFuture<String> response =
                     accountCommandService.createAccount(request);
 
@@ -30,27 +30,28 @@ public class BankAccountController {
         } catch (Exception e) {
             return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-	}
-	
-	@PutMapping(value = "/deposit")
-	public ResponseEntity<String> deposit(@RequestBody DepositeRequest request) { 
-		try {
+
+    }
+
+    @PutMapping(value = "/deposit")
+    public ResponseEntity<String> deposit(@RequestBody DepositRequest request) {
+        try {
             accountCommandService.depositToAccount(request);
 
             return new ResponseEntity<>("Amount credited", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-	}
-	
-	@PutMapping(value = "/withdraw")
-	public ResponseEntity<String> withdraw(@RequestBody WithdrawalRequest request) { 
-		try {
+    }
+
+    @PutMapping(value = "/withdraw")
+    public ResponseEntity<String> withdraw(@RequestBody WithdrawalRequest request) {
+        try {
             accountCommandService.withdrawFromAccount(request);
 
             return new ResponseEntity<>("Amount debited.", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-	}
+    }
 }
