@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.cqrs_project.query.entity.Account;
+import com.example.cqrs_project.common.Model.Account;
 import com.example.cqrs_project.query.query.FindAccountByIdQuery;
 
 @RestController
